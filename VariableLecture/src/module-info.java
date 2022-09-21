@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author gotsa
+ *
+ */
+module VariableLecture {
+}
