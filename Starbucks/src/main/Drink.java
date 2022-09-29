@@ -7,14 +7,24 @@ public class Drink {
 	private String name;
 	private double retailPrice;
 	
+	// ingredients code
+	private int maxIngredients = 10;
+	private Ingredient[] ingredients = new Ingredient[maxIngredients];
+	private int currentPos = 0;
+	
+	
+	// basic constructor
+	// main.Drink.Drink()
 	public Drink() {
 		super();
 		this.cost = 1.0;
 		this.size = "small";
-		this.name = "coffee";
+		this.name = "drink";
 		this.retailPrice = 1.50;
 	}
 	
+	// constructor with parameters
+	// main.Drink.Drink(double, String, String, double)
 	public Drink(double cost, String size, String name, double retailPrice) {
 		super(); // this calls the parent's constructor
 		this.cost = cost;
@@ -23,6 +33,18 @@ public class Drink {
 		this.retailPrice = retailPrice;
 	}
 
+	
+	public String getDescription() {
+		return "Your Drink is: " + this.name + 
+				"\nCost: " + this.cost +
+				"\nRetail Price: " + this.retailPrice;
+	}
+	
+	public void addIngredient(Ingredient item) {
+		//this.ingredients
+	}
+	
+	
 	// getters and setters
 	public String getSize() {
 		return size;
@@ -31,6 +53,7 @@ public class Drink {
 	public double getCost() {
 		return cost;
 	}
+	
 	public void setCost(double cost) {
 		this.cost = cost;
 	}
