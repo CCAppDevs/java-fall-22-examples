@@ -41,7 +41,34 @@ public class Drink {
 	}
 	
 	public void addIngredient(Ingredient item) {
-		//this.ingredients
+		// error handling
+		if (this.currentPos >= this.maxIngredients) {
+			System.out.println("Ingredients are full");
+			return;
+		}
+		
+		if (this.currentPos < 0) {
+			System.out.println("Array is in a bad shape. Current Position is off the array.");
+			return;
+		}
+		
+		this.ingredients[currentPos] = item;
+		this.currentPos++;
+	}
+	
+	public double getTotalIngredientCost() {
+		double totalCost = 0;
+		
+		// this is where the magic happens
+		// TODO come back to this later and add a loop
+		
+		// range based for loop - 0, 1, 2, .... 9 (for a total of 10 times
+		for (int i = 0; i < 10; i++) {
+			// do stuff every loop
+		}
+		
+		
+		return totalCost;
 	}
 	
 	
