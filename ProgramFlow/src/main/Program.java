@@ -3,62 +3,66 @@ package main;
 public class Program {
 
 	public static void main(String[] args) {
-		int number = 9;
+		int counter = 10;
+		int value = 0;
+		boolean isRunning = true;
 		
-		// if-else
-		if (number == 9) { // is the number nine, if so, do a thing
-			System.out.println("The number equals 9");
+		// for-loop (range based)
+		System.out.println("Starting next loop: for (range based)");
+		
+		// count from 2 - 20 but only even numbers
+		for (int j = 2; j <= 20; j += 2) {
+			System.out.println(j);
 		}
 		
-		if (number >= 5) {
-			System.out.println("The number is greater than 4.");
+		int j = 0;
+		j += 2; // j = 2
+		j = j + 2; // j = 4
+		
+		// working with loops and arrays
+		int[] myArr = {5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+		
+		int sum = 0;
+		for (int i = 0; i < 5; i++) {
+			//System.out.println("Array at index #" + i + " has a value of " + myArr[i]);
+			sum += myArr[i];
 		}
 		
-		if (number < 5) {
-			System.out.println("The number is less than 5.");
-		} else if (number == 5) {
-			System.out.println("The number is exactly 5.");
-		} 
+		System.out.println("The total sum of all elements in the array is: " + sum);
 		
-		if (number >= 5) {
-			System.out.println("The number is 5 or greater.");
+		// foreach loop
+		
+		sum = 0;
+		for(int num : myArr) {
+			sum += num;
 		}
 		
+		System.out.println("The total sum of all elements in the array is: " + sum);
 		
-		// how to check if a number falls between a range (between 5-10)
-		// if (number >= 5 && number <= 10) 
-		// if (true && number <= 10)
-		// if (true && true) 
-		// if (true) do the stuff
-		if (number >= 5 && number <= 10) { // if >= 5 and <= 10
-			System.out.println("Number falls between 5-10");
+		
+		
+		
+		
+		// while loop
+		System.out.println("Starting next loop: while");
+		
+		while (counter > 0) {
+			// do a thing
+			counter = counter - 1;
+			System.out.println(counter);
 		}
 		
-		// if the number is greater than 10 OR number is exactly 9
-		// if (number >= 10 || number == 9)
-		// if (false || number == 9)
-		// if (false || true)
-		// if (true)
-		if (number >= 10 || number == 9) {
-			System.out.println("The number is either exactly 9 or >= 10");
-		}
+		// do while loop
+		// counter is currently 0
 		
-		// if the number does not equal 9
-		if (number != 9) {
-			System.out.println("The number is not 9");
-		}
+		System.out.println("Starting next loop: do while");
 		
-		boolean isTrue = false;
+		do {
+			// do a thing
+			counter++;
+			System.out.println(counter);
+		} while (counter < 10);
 		
-		if (isTrue) {
-			System.out.println("The boolean is true.");
-		}
-		
-		if (!isTrue) {
-			System.out.println("The boolean is NOT true.");
-		}
-		
-		// switch case
 	}
 
 }
