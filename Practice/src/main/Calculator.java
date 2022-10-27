@@ -1,24 +1,24 @@
 package main;
 
-public class Calculator {
+public class Calculator<T> {
 	
-	public int Add(int a, int b) {
+	public T Add(T a, T b) {
 		return a+b;
 	}
 	
-	public int Sub(int a, int b) {
+	public T Sub(T a, T b) {
 		return a-b;
 	}
 	
-	public int Multiply(int a, int b) {
+	public T Multiply(T a, T b) {
 		return a*b;
 	}
 	
-	public int Divide(int a, int b) {
+	public T Divide(T a, T b) {
 		return a/b;
 	}
 	
-	public void Results(char operator, int a, int b) {
+	public void Results(char operator, T a, T b) {
 		if (operator == '-') {
 			System.out.println(a + " - " + b + " = " + Sub(a, b));
 		} else if (operator == '*') {

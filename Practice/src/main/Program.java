@@ -8,7 +8,7 @@ public class Program {
 		int a = 3;
 		int b = 5;
 		
-		Calculator myCalc = new Calculator();
+		Calculator<int> myCalc = new Calculator();
 		
 		myCalc.Results('+', a, b);
 		myCalc.Results('-', a, b);
