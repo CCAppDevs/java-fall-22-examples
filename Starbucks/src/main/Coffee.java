@@ -13,4 +13,11 @@ public class Coffee extends Drink {
 		super(cost, size, name, retailPrice);
 	}
 
+	@Override
+	public String getDescription() {
+		return "Your Coffee is: " + this.getName() + 
+				"\nCost: " + this.getCost() +
+				"\nRetail Price: " + this.getRetailPrice();
+	}
+
 }

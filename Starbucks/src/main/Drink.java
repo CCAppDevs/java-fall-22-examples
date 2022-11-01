@@ -1,6 +1,6 @@
 package main;
 
-public class Drink {
+public abstract class Drink {
 	// private properties/members
 	private double cost;
 	private String size;
@@ -33,12 +33,14 @@ public class Drink {
 		this.retailPrice = retailPrice;
 	}
 
+	// public abstract String getDescription() { return "" } // this is bad
+	public abstract String getDescription(); // this is good
 	
-	public String getDescription() {
-		return "Your Drink is: " + this.name + 
-				"\nCost: " + this.cost +
-				"\nRetail Price: " + this.retailPrice;
-	}
+//	public String getDescription() {
+//		return "Your Drink is: " + this.name + 
+//				"\nCost: " + this.cost +
+//				"\nRetail Price: " + this.retailPrice;
+//	}
 	
 	public void addIngredient(Ingredient item) {
 		// error handling
